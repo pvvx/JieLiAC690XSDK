@@ -1,0 +1,9 @@
+apps_soundbox/obj/
+sdram.app
+ac690x.bin
+data.bin
+data1.bin
+map.txt
+ac690x.or32
+tools/pi32/
+
