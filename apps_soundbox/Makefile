@@ -1,4 +1,5 @@
- 
+
+POST_BUILD_DIR=./download/$(PLATFORM)/download
 PLATFORM=ac690x
 SUFFIX=
  
@@ -202,6 +203,32 @@ LIBS = \
 ../include_lib/font_lib$(SUFFIX).a \
 ../include_lib/uicon_lib$(SUFFIX).a \
 
+MP3_PATH=mp3
+MP3_FILES=\
+power_off.mp3 \
+bt.mp3 \
+music.mp3 \
+linein.mp3 \
+radio.mp3 \
+pc.mp3 \
+wait.mp3 \
+connect.mp3 \
+disconnect.mp3 \
+ring.mp3 \
+0.mp3 \
+1.mp3 \
+2.mp3 \
+3.mp3 \
+4.mp3 \
+5.mp3 \
+6.mp3 \
+7.mp3 \
+8.mp3 \
+9.mp3 \
+usb.mp3 \
+sd.mp3 \
+low_bat.mp3 \
+max_vol.mp3
 
 GEN_LIB=n
 
