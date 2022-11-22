@@ -1,6 +1,6 @@
 
-POST_BUILD_DIR=./download/$(PLATFORM)/download
 PLATFORM=ac690x
+POST_BUILD_DIR=./download/$(PLATFORM)/download
 SUFFIX=
  
  
