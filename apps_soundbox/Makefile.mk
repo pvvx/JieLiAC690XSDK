@@ -112,14 +112,14 @@ clean:
 download: $(POST_BUILD_DIR)/jl_690x.bfu
 
 
-$(POST_BUILD_DIR)/jl_690x.bin: $(POST_BUILD_DIR)/sdram.app
+$(POST_BUILD_DIR)/jl_isd.bin: $(POST_BUILD_DIR)/sdram.app
 	@echo '***** Create Download files'
 	@$(RM) $(POST_BUILD_DIR)/jl_690x.bfu
 	@cd $(POST_BUILD_DIR);./isd_download.exe -tonorflash -dev br17 -boot 0x2000 -div6 -wait 300 -format cfg -f uboot.bin sdram.app bt_cfg.bin fast_run.bin $(addprefix $(MP3_PATH)\\,$(MP3_FILES)) -key HJX_AC690X-5309.key
-	@echo '***** Create $(POST_BUILD_DIR)/jl_690x.bin - ok'
+	@echo '***** Create $(POST_BUILD_DIR)/jl_isd.bin - ok'
 
 
-$(POST_BUILD_DIR)/jl_690x.bfu: $(POST_BUILD_DIR)/jl_690x.bin
-	@cd $(POST_BUILD_DIR);./bfumake.exe -fi jl_690x.bin -ld 0x0000 -rd 0x0000 -fo jl_690x.bfu
+$(POST_BUILD_DIR)/jl_690x.bfu: $(POST_BUILD_DIR)/jl_isd.bin
+	@cd $(POST_BUILD_DIR);./bfumake.exe -fi jl_isd.bin -ld 0x0000 -rd 0x0000 -fo jl_690x.bfu
 	@echo '***** Create $(POST_BUILD_DIR)/jl_690x.bfu - ok'
 
